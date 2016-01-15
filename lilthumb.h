@@ -3,6 +3,7 @@
 
 #include <ctime>
 namespace lilthumb{
+
 std::string timeString()
 {
   time_t rawtime;
@@ -19,5 +20,5 @@ std::string timeString()
 }
 }
 
-#define logger(message) std::cerr << lilthumb::timeString() << " | "<< message << std::endl;
+#define logger(stream,message) stream << lilthumb::timeString() << " | "<< message << std::endl;
 #endif
