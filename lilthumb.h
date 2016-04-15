@@ -21,6 +21,23 @@ std::string timeString()
   return str;
 }
 
+void stone( std::ostream& stream, double* c_array, int n_values = 0 )
+{
+  stream << timeString() << " | ";
+  if( n_values == 0 )
+  {
+    stream << c_array << std::endl;
+  }
+  else
+  {
+    for( int i = 0; i < n_values - 1; i++ )
+    {
+      stream << c_array[i] << "/";
+    }
+    stream << c_array[n_values - 1] << std::endl;
+  }
+}
+
 void stone( std::ostream& stream, std::string message )
 {
   stream << timeString() << " | " << message << std::endl;
