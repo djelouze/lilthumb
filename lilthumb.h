@@ -2,6 +2,8 @@
 #define lilthumb
 
 #include <ctime>
+#include <ostream>
+
 namespace lilthumb{
 
 std::string timeString()
@@ -18,7 +20,12 @@ std::string timeString()
 
   return str;
 }
+
+void stone( std::ostream& stream, std::string message )
+{
+  stream << timeString() << " | " << message << std::endl;
 }
 
-#define logger(stream,message) stream << lilthumb::timeString() << " | "<< message << std::endl;
+}
+
 #endif
