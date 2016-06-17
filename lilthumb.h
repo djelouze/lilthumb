@@ -43,6 +43,12 @@ void stone( std::ostream& stream, std::string message )
   stream << timeString() << " | " << message << std::endl;
 }
 
+void separator( std::ostream&  stream )
+{
+  stream << "________________________________________";
+  stream << "________________________________________" << std::endl;
+  stream << std::endl;
+}
 }
 
 #endif
